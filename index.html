@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Cartão</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <div class="bg-fundo"></div>
+    <section class="cards">
+      <figure class="card card-front">
+        <img src="./assets/images/bg-card-front.png" alt="Frente do cartão" />
+        <figcaption class="card-info">
+          <p class="card-number">0000 0000 0000 0000</p>
+          <div class="card-meta">
+            <span class="card-holder">NOME DO TITULAR</span>
+            <span class="card-expiry">MM/AA</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="card card-back">
+        <img src="./assets/images/bg-card-back.png" alt="Verso do cartão" />
+        <figcaption class="card-cvc">000</figcaption>
+      </figure>
+    </section>
+
+    <section class="form-wrapper" id="form-wrapper">
+      <form id="card-form" class="card-form">
+        <div class="form-group">
+          <label for="cardholder-name">Nome do titular</label>
+          <input type="text" id="cardholder-name" placeholder="Ex: João Silva" required />
+          <span class="error" id="name-error">Campo obrigatório</span>
+        </div>
+
+        <div class="form-group">
+          <label for="card-number">Número do cartão</label>
+          <input type="text" id="card-number" placeholder="0000 0000 0000 0000" required />
+          <span class="error" id="number-error">Número inválido</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiry-date">Validade (MM/AA)</label>
+            <input type="text" id="expiry-date" placeholder="MM/AA" required />
+            <span class="error" id="expiry-error">Data inválida</span>
+          </div>
+
+          <div class="form-group">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="123" required />
+            <span class="error" id="cvc-error">CVC inválido</span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirmar</button>
+      </form>
+
+      <div class="success" id="success-message">
+        <div class="checkmark">✓</div>
+        <h2>Obrigado!</h2>
+        <p>Seus dados foram adicionados com sucesso.</p>
+        <button class="continue-btn" id="continue-btn">Continuar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
